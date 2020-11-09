@@ -1,32 +1,47 @@
 <?php
-include 'dbconnect.php';
-header('Content-type: application/json');
 session_start();
+include "db_conn.php";
 
-$username =  $_POST['username'];
-$password = $_POST['password'];
-$password = md5($password);
+if (isset($_POST['uname']) && isset($_POST['password'])) {
+	
+	function validate($data){
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+		
+	}
+	$uname = validate($_POST['uname']);
+	$pass = validate($_POST['password']);
+	if (empty($uname)) {
+		header("Location: index.php?error=User name is required");
+		exit();
+	}else if(empty($pass)){
+		header("Location: index.php?error=password is required");
+		exit();
+	}else{
+		$sql = "SELECT * FROM loginform WHERE User='$uname' AND Pass='$pass'";
+		
+		$result = mysqli_query($conn, $sql);
+		
+		if (mysqli_num_rows($result)) {
+			$row = mysqli_fetch_assoc($result);
+			if($row['User'] === $uname && $row['Pass'] === $uname ){
+				$_SESSION['User'] = $row['User'];
+				//$_SESSION['name'] = $row['name'];
+				$_SESSION['ID'] = $row['ID'];
+				header("Location: home.php");
+				exit();
+			}
+			
+		}else{
+			header("Location: index.php?error=Incorect User name or password");
+			exit();
+		}
+	}
+	
+}else{
+	header("Location: index.php");
+	exit();
+	}
 
-$sql = "SELECT player_id,username,password FROM users WHERE username = '$username' and password = '$password'";
-
-$result = mysqli_query($mysqli,$sql);
-$count = mysqli_num_rows($result);
-
-
-if($count==1){
-
-  while($row = $result->fetch_array()){
-    $id = $row['player_id'];
-  }
-
-  $_SESSION['player_id'] = $id;
-
-
-  
-  print json_encode(array('success'=>'ok'));
-  
-
-} else{
-        header("HTTP/1.1 500 Internal Server Error");  
-}
-?>
