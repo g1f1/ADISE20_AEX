@@ -1,0 +1,79 @@
+body {
+  background-image:url('bg2.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  flex-direction: column;
+  background-size:cover;
+}
+
+ *{
+	 font-family: sans-serif;
+	 box-sizing: border-box;
+ }
+ 
+ h2{
+	 text-align: center;
+	 margin-bottom: 40px;
+ }
+ input {
+		display: block;
+		border: 2px solid #ccc;
+		width: 95%;
+		padding: 10px;
+		margin: 10px auto;
+		border-radius: 5px;
+ }
+ label {
+		color: #888;
+		font-size: 15px;
+		padding: 10px;
+ }
+ form {
+	 width: 500px;
+	 border: 2px solid #ccc;
+	 padding: 30px;
+	 background: #fff;
+	 border-radius: 15px;
+ }
+button {
+	float: right;
+	background: #555;
+	padding :10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+}
+ button:hover{
+	 opacity: .7;
+ }
+ 
+ .error {
+	 background: #F2DEDE;
+	 color: #A944442;
+	 padding: 10px;
+	 width: 95%;
+	 border-radius 5px;
+	 margin: 20px auto;
+ }
+ h1 { 
+	 text-align: center;
+	 color: #fff;
+ }
+ a {
+	float: right;
+	background: #555;
+	padding :10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+	text-decoration: none;
+}
+ a:hover{
+	 opacity: .7;
+ }
