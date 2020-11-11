@@ -2,11 +2,11 @@
 <html>
 <head>
 	<title>LOGIN</title>
-	<link rel="stylesheet" type="text/css" href="../../../../../xampp/htdocs/ADISE/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-    <img src="../../../../../xampp/htdocs/ADISE/g.png" width="700" height="300">
+    <img src="g.png" width="700" height="300">
 	<form action="login.php" method="post">
 		<h2>LOGIN</h2>
 		<?php if(isset($_GET['error'])) { ?>
