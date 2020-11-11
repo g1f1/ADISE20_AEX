@@ -1,5 +1,5 @@
 ﻿body {
-  background-image:url('../../../../../xampp/htdocs/ADISE/bg2.jpg');
+  background-image:url('bg2.jpg');
   display: flex;
   justify-content: center;
   align-items: center;
