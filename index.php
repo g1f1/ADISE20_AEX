@@ -3,13 +3,14 @@
 
 <head>
 	<title>LOGIN</title>
-	<link rel="stylesheet" type="text/css" href="../../../../../xampp/htdocs/ADISE/style.css">
-	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="g.png">
+
 
 </head>
 <body>
 
-    <img src="../../../../../xampp/htdocs/ADISE/g.png" width="600" height="210">
+    <img src="g.png" width="600" height="210">
 	<form action="login.php" method="post">
 		<h2>LOGIN</h2>
 		<?php if(isset($_GET['error'])) { ?>
