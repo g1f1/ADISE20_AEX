@@ -3,13 +3,13 @@
 
 <head>
 	<title>SIGN UP</title>
-	<link rel="stylesheet" type="text/css" href="../../../../../xampp/htdocs/ADISE/style.css">
-	<link rel="icon" href="../../../../../xampp/htdocs/ADISE/g.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="g.png">
 
 </head>
 <body>
 
-    <img src="../../../../../xampp/htdocs/ADISE/g.png" width="600" height="210">
+    <img src="g.png" width="600" height="210">
 	
 
       <form method="post" action="signup-check.php">
