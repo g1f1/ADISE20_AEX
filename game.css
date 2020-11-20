@@ -1,0 +1,237 @@
+* {
+    box-sizing:border-box;
+
+  }
+
+
+  body {
+    background-image:url('bg2.jpg');
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    flex-direction: column;
+    background-size:cover;
+  }
+
+
+.bg {
+    background-image:url('bg2.jpg');
+    display: flex;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+  }
+
+  
+.players{
+    padding:100px;
+    float:left;
+    width:20%; 
+    height:950px;
+
+
+  }
+  
+  .board {
+    padding:20px;
+    height:950px;
+    float:left;
+    width:60%; 
+    margin-top: 40px;
+    margin:0 auto;
+    background-image: url('bg-game.png');
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+  }
+  
+  .round {
+    padding:20px;
+    float:left;
+    width:20%; /* The width is 20%, by default */
+    height:950px;
+  }
+
+  .back {
+    border-radius: 4px;
+    background-color:  #ebb134;
+    border: none;
+    color:black;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-top: 70px;
+    margin-left: 40px;
+    position:absolute;
+    top:0;
+    left:0;
+    height:5%;
+    WIDTH:7%;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+  }
+
+  .home{
+    width: 50px ;
+    height:50px;
+    size:full;
+  
+  }
+  
+  .back span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .back span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .back:hover span {
+    padding-right: 25px;
+  }
+  
+  .back:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+
+.player1 , .player2{ 
+    top:80%;
+    position: absolute; 
+    margin-top: 200px;
+    margin-left: 40px;
+    top:0;
+    left:0;
+    background-image: url('players.png') ;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    text-align: center;
+    height:20%;
+    border-radius: 20%;
+    width: 10% ;
+    font-size: 20px ;
+    max-height:22%;
+    max-width: 10%;
+    word-break:break-all;
+    word-wrap: break-word;
+  } 
+
+ 
+
+
+  #stop {
+    top:80%;
+    position: absolute; 
+    margin-top: 450px;
+    margin-left: 50px;
+    top:0;
+    left:0;
+    background: linear-gradient(120deg,#ff5e00,#ee0808);
+    border: none;
+    color: black;
+    height:10%;
+    WIDTH:10%;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.3s;
+    font-weight: bold;
+  }
+  
+  #stop:hover {
+    background-color: #8e653e;
+    color: white;
+  }
+  
+
+  
+#start{
+    position: absolute;
+    top: 50%;
+    left: 47.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background: linear-gradient(120deg,#ff5e00,#ee0808);
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    height:10%;
+    WIDTH:10%;
+    margin: 4px 2px;
+    transition: 0.3s;
+    font-weight: bold;
+  }
+  
+  #start:hover {
+    background-color: #8e653e;
+    color: white;
+  }
+
+  
+#chat { 
+    top:80%;
+    right:0;
+    position: absolute; 
+    bottom:0;
+    right:0;
+    width:13%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+  
+  }
+
+
+
+  .dot {
+    top:80%;
+    position: absolute; 
+    margin-top: 10%;
+    margin-right: 6%;
+    top:0;
+    right:0;
+    height:19%;
+    width: 10%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+    animation-name: load;
+    animation-duration: 2s;
+    border: 5px solid black ;
+    text-align: center;
+    max-height:22%;
+    max-width: 10%;
+    
+  }
+  
+  .dot h1,p {
+    
+   font-size: 30px ;
+   resize: inherit;
+   word-wrap: break-word;
+
+  }
+  
+
+  /* Use a media query to add a break point at 800px: */
+  @media screen and (max-width:800px) {
+    .left, .main, .right {
+      width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+  @keyframes load {
+    25%  {background-color:#ebb134; }}
+  
+  
