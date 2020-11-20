@@ -7,12 +7,15 @@
 <link rel="stylesheet" href="game.css">
 <title>Backgammon Game</title>
 <link rel="icon" href="g.png">
+<script src="rules.js"></script>
+
+
 </head>
 <body>
 
  <div class="bg">
     <div class="players">
-        <button class="back"  onclick="location.href=''"><span>How to play?</span></button>
+        <button id="back"><span>How to play?</span></button> 
         <div class="player1">
             <h1> Player 1 </h1>
             <p>Round: 1 </p>
@@ -53,5 +56,50 @@
   
     </div>
 </div>   
+
+
+
+<div id="rules" class="rules">
+
+    <div class="rules-content">
+      <span class="close">&times;</span>
+      <p>Κανονες Παιχνιδιου..</p>
+    </div>
+  
+  </div>
+
+<script>
+    var modal = document.getElementById("rules");
+
+
+var btn = document.getElementById("back");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
+
+  
     </body>
+
+
+
+
     </html>
