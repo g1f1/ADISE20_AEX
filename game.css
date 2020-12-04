@@ -428,7 +428,6 @@
       display: none; 
       position: fixed; 
       z-index: 1; 
-      padding-top: 100px;
       left: 0;
       top: 0;
       width: 100%;
@@ -440,26 +439,30 @@
     
     
     .rules-content {
-      background-color: #fefefe;
+      background-image: url('rules.png');
+	  background-repeat : no-repeat;
+	  background-size: cover;
       margin: auto;
       padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
+	  width:50%;
+	  height:110%;
       text-align: center;
       font-size: 40px;
     }
     
     
     .close {
-      color: #aaaaaa;
+      
+	  color: #000;
       float: right;
-      font-size: 28px;
+      font-size: 50px;
       font-weight: bold;
+	  margin-right:13px;
     }
     
     .close:hover,
     .close:focus {
-      color: #000;
+      color: #aaaaaa;
       text-decoration: none;
       cursor: pointer;
     }
