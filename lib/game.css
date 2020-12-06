@@ -1,0 +1,469 @@
+﻿
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  body { 
+    background-image:url('bg2.jpg');
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 950px; 
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  .column1 {
+    float: left;
+    width: 13.33%;
+    padding: 10px;
+    height: 950px; 
+  }
+
+
+  .column2 {
+    float: left;
+    width: 70%;
+    padding: 10px;
+    height: 950px; 
+    background-image: url('wooden.jpg');
+    background-size: cover;
+  }
+
+  .column3 {
+    float: left;
+    width: 16.5%;
+    padding: 10px;
+    height: 950px; 
+  }
+
+  #NewGameButton {
+    top: 306px;
+    position: absolute;
+    margin-left:5%;
+    position:relative;
+    height:8%;
+    width:15%;
+    display: block;
+    border: none;
+    background: linear-gradient(120deg,#ff8000,#b80000);
+    background-size: 200%;
+    color: #fff;
+    cursor: pointer;
+
+  }
+
+  #Quit {
+    top: 350px;
+    position: absolute;
+    margin-left:5%;
+    position:relative;
+    height:8%;
+    width:15%;
+    display: block;
+    border: none;
+    background: linear-gradient(120deg,#ff8000,#b80000);
+    background-size: 200%;
+    color: #fff;
+    cursor: pointer;
+
+  }
+
+  #Roll {
+    top: 20px;
+    position: absolute;
+    position:relative;
+    left: -35px;
+    height:8%;
+    width:30%;
+    display: block;
+    border: none;
+    background: linear-gradient(120deg,#ff8000,#b80000);
+    background-size: 200%;
+    color: #fff;
+    cursor: pointer;
+
+  }
+
+  .board {
+    width: 610px;
+    height: 480px;
+    position: relative;
+    background-color: rgb(199, 175, 95);
+    box-sizing: border-box;
+    border: 10px solid black;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 360px;
+    margin-top: 30px;
+  }
+
+  
+  .left-bin {
+    position: relative;
+    left: 15px;
+    top: 0px;
+  
+  }
+  
+  .right-bin {
+    position: relative;
+    left: 330px;
+    top: -389px;
+    
+  }
+  
+  .arrow-down {
+    width: 0px; 
+    height: 0px; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 195px solid rgb(119, 78, 15);
+    border-bottom: 0px solid;
+    display: inline;
+    float: left;
+  }
+  
+  .left-bin .bottom-row {
+    clear: left;
+  }
+  
+  .right-bin .top-row {
+    clear: left;
+  }
+  
+  .right-bin .bottom-row {
+    clear: left;
+   
+  }
+  
+  .bottom-row {
+    position: relative;
+    top: 70px
+  }
+  /*
+  .bottom-row, .top-row {
+    margin: 0 auto;
+    width: 550px;
+    clear: both;
+  }
+  */
+  
+  
+  .arrow-up {
+    width: 0px; 
+    height: 100px; 
+    border-top: 0px solid;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent ;
+    border-bottom: 195px solid rgb(68, 22, 0);
+    display: inline;
+    float: left;
+  }
+  
+  .arrow-up.odd {
+    border-bottom: 195px solid rgb(119, 78, 15); 
+    
+    }
+  
+  .arrow-down.even {
+    border-top: 195px solid rgb(68, 22, 0);}
+  
+
+ .middle-bar {
+      width: 20px;
+      height: 470px;
+      padding: 5px;
+      background-color: black;
+      position: absolute;
+      left: 280px;
+      top: 0px;
+      
+    
+  }
+  
+  .piece_1 {
+    width: 36px;
+    height: 36px;
+    background-image : url('piece-white.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 17px;
+    z-value: 1;
+    border-radius: 18px;
+  }
+  
+  .piece_2 {
+    width: 36px;
+    height: 36px;
+    background-image : url('piece-white.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 38px;
+    left: 17px;
+    z-value: 1;
+    border-radius: 18px;
+    
+  }
+  
+  .piece_3 {
+    width: 36px;
+    height: 36px;
+    background-image : url('piece-white.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 76px;
+    left: 17px;
+    z-value: 1;
+    border-radius: 18px;
+    
+  }
+  .piece_4 {
+    width: 36px;
+    height: 36px;
+    background-image : url('piece-white.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 114px;
+    left: 17px;
+    z-value: 1;
+    border-radius: 18px;
+    
+  }
+  
+  .piece_5 {
+    width: 36px;
+    height: 36px;
+    background-image : url('piece-white.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 152px;
+    left: 17px;
+    z-value: 1;
+    border-radius: 18px;
+    
+  }
+  
+
+  .piece_6 {
+    width: 36px;
+    height: 36px;
+    background-image : url('piece-black.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 423px;
+    left: 17px;
+    z-value: 1;
+    border-radius: 18px;
+    
+  }
+  
+  .piece_7 {
+    width: 36px;
+    height: 36px;
+    background-image : url('piece-black.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 386px;
+    left: 17px;
+    z-value: 1;
+    border-radius: 18px;
+    
+  }
+
+  .piece_8 {
+    width: 36px;
+    height: 36px;
+    background-image : url('piece-black.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 349px;
+    left: 17px;
+    z-value: 1;
+    border-radius: 18px;
+    
+  }
+  .piece_9 {
+    width: 36px;
+    height: 36px;
+    background-image : url('piece-black.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 312px;
+    left: 17px;
+    z-value: 1;
+    border-radius: 18px;
+    
+  }
+  .piece_10 {
+    width: 36px;
+    height: 36px;
+    background-image : url('piece-black.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 275px;
+    left: 17px;
+    z-value: 1;
+    border-radius: 18px;
+    
+  }
+
+  #player1 { 
+
+    background-color:white;
+    height:130px;
+    width: 280px;
+    left: 1250px; 
+    bottom: 100px;
+    position:absolute;
+    float: right;
+    margin-top:100px;
+    border: 5px solid black;
+  }
+  
+  #player2 { 
+
+    background-color:white;
+    height:130px;
+    width: 280px;
+    left: 1250px;  
+    bottom: 150px;
+    top:10px;
+    position:absolute;
+    float: right;
+    margin-top:100px;
+    border: 5px solid black;
+    
+  }
+
+  #p1 {
+     
+      color:red;
+
+  }
+
+  p {
+    margin-left:12px;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top:0;
+  }
+
+
+  #back {
+    border-radius: 4px;
+    background-color:  #ebb134;
+    border: none;
+    color:black;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-top: 70px;
+    margin-left:5%;
+    position:absolute;
+    top:0;
+    height:5%;
+    WIDTH:7%;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+  }
+
+
+  
+  
+  #back span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  #back span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  #back:hover span {
+    padding-right: 25px;
+  }
+  
+  #back:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .rules p{
+    font-size:20px;
+    
+    }
+    
+    .rules {
+      display: none; 
+      position: fixed; 
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto; 
+      background-color: rgb(0,0,0); 
+      background-color: rgba(0,0,0,0.4); 
+    }
+    
+    
+    .rules-content {
+      background-image: url('rules.png');
+	  background-repeat : no-repeat;
+	  background-size: cover;
+      margin: auto;
+      padding: 20px;
+	  width:50%;
+	  height:110%;
+      text-align: center;
+      font-size: 40px;
+    }
+    
+    
+    .close {
+      
+	  color: #000;
+      float: right;
+      font-size: 50px;
+      font-weight: bold;
+	  margin-right:13px;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #aaaaaa;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
