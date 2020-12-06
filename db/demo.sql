@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 11 Νοε 2020 στις 00:25:52
+-- Χρόνος δημιουργίας: 04 Δεκ 2020 στις 11:42:15
 -- Έκδοση διακομιστή: 10.4.14-MariaDB
 -- Έκδοση PHP: 7.4.11
 
@@ -20,6 +20,33 @@ SET time_zone = "+00:00";
 --
 -- Βάση δεδομένων: `demo`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Δομή πίνακα για τον πίνακα `board`
+--
+
+CREATE TABLE `board` (
+  `x` tinyint(1) NOT NULL,
+  `y` tinyint(1) NOT NULL,
+  `b_color` enum('B','W') NOT NULL,
+  `piece_color` enum('W','B') DEFAULT NULL,
+  `piece` enum('K','Q','R','B','N','P') DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Δομή πίνακα για τον πίνακα `game_status`
+--
+
+CREATE TABLE `game_status` (
+  `status` enum('not active','initialized','started','\r\nended','aborded') NOT NULL DEFAULT 'not active',
+  `p_turn` enum('W','B') DEFAULT NULL,
+  `result` enum('B','W','D') DEFAULT NULL,
+  `last_change` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -46,15 +73,38 @@ INSERT INTO `loginform` (`ID`, `User`, `Pass`, `Email`) VALUES
 (28, 'ELENH', '', 'elenhka98@gmail.com'),
 (29, 'admin', '', 'HAPPYVALENTINECAT98@GMAIL.COM');
 
+-- --------------------------------------------------------
+
+--
+-- Δομή πίνακα για τον πίνακα `players`
+--
+
+CREATE TABLE `players` (
+  `username` varchar(20) DEFAULT NULL,
+  `piece_color` enum('B','W') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Ευρετήρια για άχρηστους πίνακες
 --
+
+--
+-- Ευρετήρια για πίνακα `board`
+--
+ALTER TABLE `board`
+  ADD PRIMARY KEY (`x`,`y`);
 
 --
 -- Ευρετήρια για πίνακα `loginform`
 --
 ALTER TABLE `loginform`
   ADD PRIMARY KEY (`ID`);
+
+--
+-- Ευρετήρια για πίνακα `players`
+--
+ALTER TABLE `players`
+  ADD PRIMARY KEY (`piece_color`);
 
 --
 -- AUTO_INCREMENT για άχρηστους πίνακες
