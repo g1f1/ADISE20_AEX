@@ -1,5 +1,5 @@
 ﻿body {
-  background-image:url('bg2.jpg');
+  background-image:url('../imgs/bg2.jpg');
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,3 +95,8 @@
     color: #990000;
 }
 
+a:link {
+color: green;
+background-color: transparent;
+text-decoration: none;
+}
