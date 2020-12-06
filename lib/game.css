@@ -5,8 +5,8 @@
   }
   
   
-  body { 
-    background-image:url('bg2.jpg');
+  body { 				
+    background-image:url('../img/bg2.jpg');
   }
 
   .column {

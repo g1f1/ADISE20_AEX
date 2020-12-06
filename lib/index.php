@@ -4,7 +4,7 @@
 <head>
 	<title>LOGIN</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" href="g.png">
+	<link rel="icon" href="../imgs/g.png">
 
 
 </head>
@@ -24,7 +24,7 @@
 
 		<input type="submit" value="LOGIN" class="log">
 		
-		<a href="register.php">Not a member?Sign up</a>
+		<a href="register.php">Not a member?<b>  Sign up</a>
 
 		
 </form>

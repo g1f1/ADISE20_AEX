@@ -1,41 +1,28 @@
-<?php 
-session_start();
-
-if (isset($_SESSION['ID']) && isset($_SESSION['User'])) {
-	?>
-	
-<!DOCTYPE html>
- <link rel="stylesheet" href="game.css">
+ include "db_conn.php";
+ 
+ <!DOCTYPE html>
+  <html>
+  <head>
+  <link rel="stylesheet" href="game.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="src/game.js"></script>
-<html>
-<head>
-<br><br>
-	<title>HOME</title>
-	 <title>Backgammon Game</title>
+  
+  <title>Backgammon Game</title>
   <link rel="icon" href="g.png">
- 
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	  <h1>Hello, <?php echo $_SESSION['ID']; ?></h1>  
-	  <a href="logout.php">Logout</a>
+  <style>
 
+  </style>
+  </head>
+  <body>
+  
 
-<?php
-}else{
-	  header("Location: index.php");
-   	  exit();
-}
-
- ?>
-
+  
   <div class="row">
     <div class="column1" >
       
     
     </div>
-<br>
+
     <div class="column2">
       <button id="back"><span>How to play?</span></button> 
 	    <h1>Hello, <?php echo $_SESSION['ID']; ?></h1>  

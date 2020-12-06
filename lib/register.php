@@ -68,7 +68,7 @@
 
 
 
-		<a href="index.php">Already a member?Login in</a>
+		<a href="index.php">Already a member? <b> Login in</a>
 
 		
 </form>
