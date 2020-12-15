@@ -1,4 +1,4 @@
-<?php include('login.php') ; ?>
+<?php include ('db_conn.php')?>
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +23,7 @@
 		<label>Password</label>
 		<input type="password" name="password" placeholder="Type Password...">
 
-		<input type="submit" value="LOGIN" class="log">
+		<input type="submit" value="LOGIN" name="login_user" class="log">
 		
 		<a href="register.php">Not a member?<b>  Sign up</a>
 

@@ -24,16 +24,15 @@
     </div>
 
     <div class="column2">
-    <!---	<h1>Hello, <?php echo $_SESSION['ID']; ?></h1> --->
-      <button id="back" onclick="rules()"><span>How to play?</span></button> 
+   	<!----<h1>Hello, <?php echo $_SESSION['username']; ?></h1> --->
+   	<button id="back" onclick="rules()"><span>How to play?</span></button> 
       
       <button id="logout" onclick="window.location.href='index.php'"><span>Logout</span></button> 
 
-      <button type="button" id="StartGameButton" onclick="window.location.href='game.html'">Start Game</button><br/>
+      <button type="button" id="StartGameButton" onclick="window.location.href='game.php'">Start Game</button><br/>
     <br/>
  
-    <button type="button" id="Quit">Quit Game</button><br/>
-		
+   		
 		
 		
        </div>

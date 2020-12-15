@@ -1,14 +1,15 @@
- include "db_conn.php";
+ 
+ <?php include "db_conn.php"; ?>
  
  <!DOCTYPE html>
   <html>
   <head>
   <link rel="stylesheet" href="game.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="src/game.js"></script>
+  <script type="text/javascript" src="game.js"></script>
   
   <title>Backgammon Game</title>
-  <link rel="icon" href="g.png">
+  <link rel="icon" href="../imgs/g.png">
   <style>
 
   </style>
@@ -24,10 +25,12 @@
     </div>
 
     <div class="column2">
-      <button id="back"><span>How to play?</span></button> 
-	    <h1>Hello, <?php echo $_SESSION['ID']; ?></h1>  
-	  <a href="logout.php">Logout</a>
-      <button type="button" id="NewGameButton">New Game</button><br/>
+     	<button id="back" onclick="rules()"><span>How to play?</span></button> 
+      
+     	 <button id="logout" onclick="window.location.href='index.php'"><span>Logout</span></button> 
+     	
+	  <!---  <h1>Hello, <?php echo $_SESSION['ID']; ?></h1>  --->
+	       <button type="button" id="NewGameButton">New Game</button><br/>
     <br/>
  
     <button type="button" id="Quit">Quit Game</button><br/>
@@ -125,35 +128,9 @@
   
   </div>
 
-<script>
-    var modal = document.getElementById("rules");
-
-
-var btn = document.getElementById("back");
-
-
-var span = document.getElementsByClassName("close")[0];
-
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
 
 
-</script>
   
 </body>
 </html>

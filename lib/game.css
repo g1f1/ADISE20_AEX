@@ -36,7 +36,7 @@
     width: 70%;
     padding: 10px;
     height: 950px; 
-    background-image: url('wooden.jpg');
+    background-image: url('../imgs/wooden.jpg');
     background-size: cover;
   }
 
@@ -439,8 +439,8 @@
     
     
     .rules-content {
-      background-image: url('rules.png');
-	  background-repeat : no-repeat;
+      background-image: url('../imgs/RULES.png');	  
+      background-repeat : no-repeat;
 	  background-size: cover;
       margin: auto;
       padding: 20px;
@@ -466,4 +466,22 @@
       text-decoration: none;
       cursor: pointer;
     }
+    
+     #logout {
+	
+	border-radius: 4px;
+    background-color:  #ebb134;
+    border: none;
+    color:black;
+    margin-top:65px;
+    margin-left:90%;
+    top:0;
+    height:5%;
+    WIDTH:7%;
+  	cursor: pointer;
+
+	
+	
+}
+
     

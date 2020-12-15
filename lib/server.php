@@ -18,11 +18,15 @@ if (isset($_POST['reg_user'])) {
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
 
-  if (empty($username)) { array_push($errors, "Username is required"); }
-  if (empty($email)) { array_push($errors, "Email is required"); }
-  if (empty($password_1)) { array_push($errors, "Password is required"); }
+  if (empty($username)) {header("Location: register.php?error=Username is required");
+      exit();
+	 }
+  if (empty($email)) { header("Location: register.php?error=Email is required"); exit();
+ }
+  if (empty($password_1)) { header("Location: register.php?error=Password is required");exit();
+ }
   if ($password_1 != $password_2) {
-	array_push($errors, "The two passwords do not match");
+	header("Location: register.php?error=The two passwords do not match"); exit();
   }
  
   $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
