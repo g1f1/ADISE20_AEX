@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 07 Δεκ 2020 στις 17:14:22
--- Έκδοση διακομιστή: 10.4.13-MariaDB
--- Έκδοση PHP: 7.4.7
+-- Χρόνος δημιουργίας: 16 Δεκ 2020 στις 12:53:49
+-- Έκδοση διακομιστή: 10.4.14-MariaDB
+-- Έκδοση PHP: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Βάση δεδομένων: `test1`
+-- Βάση δεδομένων: `demo`
 --
 
 DELIMITER $$
@@ -73,31 +73,6 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `loginform`
---
-
-CREATE TABLE `loginform` (
-  `ID` int(11) NOT NULL,
-  `User` varchar(50) NOT NULL,
-  `Pass` varchar(50) NOT NULL,
-  `Email` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Άδειασμα δεδομένων του πίνακα `loginform`
---
-
-INSERT INTO `loginform` (`ID`, `User`, `Pass`, `Email`) VALUES
-(1, 'admin', 'admin', NULL),
-(2, '', '', NULL),
-(3, '', '', NULL),
-(26, 'ELENH', '', 'elenhka98@gmail.com'),
-(28, 'ELENH', '', 'elenhka98@gmail.com'),
-(29, 'admin', '', 'HAPPYVALENTINECAT98@GMAIL.COM');
-
--- --------------------------------------------------------
-
---
 -- Δομή πίνακα για τον πίνακα `players`
 --
 
@@ -116,6 +91,19 @@ INSERT INTO `players` (`username`, `piece_color`, `token`, `last_action`) VALUES
 ('vv', 'B', '15d4c9daf64ac1f65a5801c0c107bf74', '2019-12-12 11:24:47'),
 ('aaa', 'W', '89703ced141f2f7c3b0b04c050c96fb6', '2019-12-12 11:24:49');
 
+-- --------------------------------------------------------
+
+--
+-- Δομή πίνακα για τον πίνακα `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Ευρετήρια για άχρηστους πίνακες
 --
@@ -127,26 +115,26 @@ ALTER TABLE `board`
   ADD PRIMARY KEY (`x`,`y`);
 
 --
--- Ευρετήρια για πίνακα `loginform`
---
-ALTER TABLE `loginform`
-  ADD PRIMARY KEY (`ID`);
-
---
 -- Ευρετήρια για πίνακα `players`
 --
 ALTER TABLE `players`
   ADD PRIMARY KEY (`piece_color`);
 
 --
+-- Ευρετήρια για πίνακα `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT για άχρηστους πίνακες
 --
 
 --
--- AUTO_INCREMENT για πίνακα `loginform`
+-- AUTO_INCREMENT για πίνακα `users`
 --
-ALTER TABLE `loginform`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
