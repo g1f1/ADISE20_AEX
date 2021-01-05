@@ -1,0 +1,15 @@
+{
+  "name": "jquery-3.5.1.min",
+  "_cacheHeaders": {
+    "ETag": "W/\"5eb09f0f-15d84\"",
+    "Last-Modified": "Mon, 04 May 2020 23:02:39 GMT",
+    "Content-Length": "30879",
+    "Content-Type": "application/javascript; charset=utf-8"
+  },
+  "_release": "e-tag:W/\"5eb09f0",
+  "main": "index.js",
+  "_source": "https://code.jquery.com/jquery-3.5.1.min.js",
+  "_target": "*",
+  "_originalSource": "https://code.jquery.com/jquery-3.5.1.min.js",
+  "_direct": true
+}
