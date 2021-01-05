@@ -3,8 +3,8 @@
 <html>
 <head>
   <title>SIGN UP</title>
-   <link rel="stylesheet" type="text/css" href="register.css">
-  <link rel="icon" href="../imgs/g.png">
+   <link rel="stylesheet" type="text/css" href="css/register.css">
+  <link rel="icon" href="imgs/g.png">
 </head>
 <body>
 	

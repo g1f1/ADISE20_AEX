@@ -4,7 +4,7 @@ $sname= "localhost";
 $unmae= "root";
 $password = "";
 
-$db_name= "demo";
+$db_name= "adise20_chess11";
 
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 

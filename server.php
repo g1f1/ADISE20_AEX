@@ -53,7 +53,7 @@ else{
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
-  	header("Location: home.php");
+  	header("Location: tavliplakoto/index.html");
   
 }}
 
