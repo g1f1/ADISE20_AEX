@@ -48,55 +48,6 @@
     height: 950px; 
   }
 
-  #bc_login , #bc_reset {
-    top: 306px;
-    margin-left:40%;
-    position:relative;
-    height:8%;
-    width:15%;
-    display: block;
-    border: none;
-    background: linear-gradient(120deg,#ff8000,#b80000);
-    background-size: 200%;
-    color: #fff;
-    cursor: pointer;
-
-  }
-
-  #Quit {
-    top: 350px;
-    position: absolute;
-    margin-left:40%;
-    position:relative;
-    height:8%;
-    width:15%;
-    display: block;
-    border: none;
-    background: linear-gradient(120deg,#ff8000,#b80000);
-    background-size: 200%;
-    color: #fff;
-    cursor: pointer;
-
-  }
-
-  #Roll {
-    top: 20px;
-    position: absolute;
-    position:relative;
-    left: -35px;
-    height:8%;
-    width:30%;
-    display: block;
-    border: none;
-    background: linear-gradient(120deg,#ff8000,#b80000);
-    background-size: 200%;
-    color: #fff;
-    cursor: pointer;
-
-  }
-
-
-  
   .left-bin {
     position: relative;
     left: 15px;
@@ -139,14 +90,6 @@
     position: relative;
     top: 70px
   }
-  /*
-  .bottom-row, .top-row {
-    margin: 0 auto;
-    width: 550px;
-    clear: both;
-  }
-  */
-  
   
   .arrow-up {
     width: 0px; 
@@ -169,7 +112,7 @@
   
   
 
-  p  ,#game_info {
+  p  {
     margin-left:12px;
     font-weight: bold;
     font-size: 35px;
@@ -288,14 +231,49 @@
     }
     
    
-    
 
-.createGame   {
-  top: 306px;
+.createGame {
+  top: 206px;
   margin-left:30%;
   position:relative;
   font-size:34px;
 }
+
+#start {
+	top: 306px;
+    margin-left:40%;
+    position:relative;
+    height:8%;
+    width:15%;
+    border: none;
+    background: linear-gradient(120deg,#ff8000,#b80000);
+    color: #fff;
+    cursor: pointer;
+
+  }
   
   
+   #hide ,#show {
+  	height:5%;
+    width:6%;
+    border: none;
+    background: linear-gradient(120deg,#ff8000,#b80000);
+    color: #fff;
+    cursor: pointer;
+
+}
+  
+#info {
+   top: 106px;
+    margin-left:7%;
+    position:relative;
+    height:8%;
+    width:15%;
+    display: block;
+    border: none;
+    background: linear-gradient(120deg,#ff8000,#b80000);
+    color: #fff;
+    cursor: pointer;
+
+  }
 
