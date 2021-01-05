@@ -1,13 +1,15 @@
- <?php include "lib/db_conn.php";
+ <?php include "db_conn.php";
+   	  
   ?> 
   
  <!DOCTYPE html>
   <html>
   <head>
   <link rel="stylesheet" href="css/home.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="js/home.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Backgammon Game</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="icon" href="imgs/g.png">
   <style>
 
@@ -24,18 +26,40 @@
     </div>
 
     <div class="column2">
-   	<!----<h1>Hello, <?php echo $_SESSION['username']; ?></h1> --->
+  
    	<button id="back" onclick="rules()"><span>How to play?</span></button> 
       
-      <button id="logout" onclick="window.location.href='index.php'"><span>Logout</span></button> 
+     <button id="logout" onclick="window.location.href='logout.php'"><span>Logout</span></button> 
+      
+      
+   <button id="info" onclick="loadDoc()">About Us</button>
 
-      <button type="button" id="StartGameButton" onclick="window.location.href='game.php'">Start Game</button><br/>
-    <br/>
- 
-   		
+	
+
+<div class="createGame" >
+
+<p>Welcome to the Backgammon Game!!</p> 
+
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
+
+</div>
+  <button id='start' type="button">Start Game</button><br/>
+
 		
-		
-       </div>
+ </div>
 
 
                   

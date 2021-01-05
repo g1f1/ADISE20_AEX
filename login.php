@@ -27,7 +27,7 @@ if (isset($_POST['login_user'])) {
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "You are now logged in";
-  	  header('location: home.php');
+  	  header('location: tavliplakoto/index.html');
   	}else {
   		header("Location: index.php?error=Wrong username/password combination");
       exit();

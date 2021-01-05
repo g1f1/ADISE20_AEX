@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+
+<style>
+
+p {
+  font-size: 54px;
+}
+</style>
+
+
+</head>
+
+<body>
+<p id="countdown"> </p>
+
+<script>
+const startingMinutes=1;
+
+let time = startingMinutes * 60;
+
+const countdownEl = document.getElementById('countdown');
+
+setInterval(updateCountdown,1000);
+
+function updateCountdown() {
+	const minutes = Math.floor(time/60);
+	let seconds = time % 60;
+	
+	seconds = seconds < 60 ? '0' | seconds : seconds;
+	
+	countdownEl.innerHTML = `${minutes}:${seconds}`;
+	time--;
+	time = time < 0 ? 0 : time; 
+	}
+
+</script>
+
+
+</body>
+
+</html>
