@@ -1,14 +1,17 @@
- <?php include "lib/db_conn.php";
+ <?php include "db_conn.php";
+ 	include "backgammon.php";
+ 	include "users.php"
+ 	  
   ?> 
   
  <!DOCTYPE html>
   <html>
   <head>
-  <link rel="stylesheet" href="css/home.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="js/home.js"></script>
+  <link rel="stylesheet" href="home.css">
+  <script type="text/javascript" src="home.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Backgammon Game</title>
-  <link rel="icon" href="imgs/g.png">
+  <link rel="icon" href="../imgs/g.png">
   <style>
 
   </style>
@@ -29,13 +32,35 @@
       
       <button id="logout" onclick="window.location.href='index.php'"><span>Logout</span></button> 
 
-      <button type="button" id="StartGameButton" onclick="window.location.href='game.php'">Start Game</button><br/>
-    <br/>
- 
-   		
+
+<form action="" class="createGame" >
+
+   <label>Give username:</label>
+  <input type="text" id="username" name="username"><br><br>
+  
+  <label>Select your Color:</label>
+
+  <label class="container">White
+  	 <input type="radio" id="pcolor" checked="checked" name="pcolor" value='W'>
+  </label>
+  
+  <label class="container">Black
+	<input type="radio" id="pcolor" name="pcolor"value='B' >
+     </label>	  
+<br><br>
+</form>
+
+
+      <button id='bc_login' class='btn btn-primary' type="button">Log to Game</button><br/>
+
+  	  <button id='bc_reset' class='btn btn-primary' type="button">Start Game</button><br/>
+
+	<div id='game_info'>
+	
+	</div>
 		
 		
-       </div>
+ </div>
 
 
                   
