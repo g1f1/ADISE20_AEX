@@ -1,17 +1,17 @@
-<?php include('server.php') ?>
+<?php include('sign-up.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>SIGN UP</title>
-   <link rel="stylesheet" type="text/css" href="register.css">
-  <link rel="icon" href="../imgs/g.png">
+   <link rel="stylesheet" type="text/css" href="css/register.css">
+  <link rel="icon" href="imgs/g.png">
 </head>
 <body>
 	
-	 <img src="../imgs/g.png" width="600" height="210">
+	 <img src="imgs/g.png" width="600" height="210">
 
 	
-  <form method="post" action="server.php">
+  <form method="post" action="sign-up.php">
   	<?php if(isset($_GET['error'])) { ?>
 			<p class="error"><?php echo $_GET['error']; ?></p>
 		<?php } ?>
@@ -38,8 +38,10 @@
   	  <button type="submit" class="log" name="reg_user">Register</button>
   	</div>
   	<p>
-  		Already a member? <a href="login.php">Sign in</a>
+  		 <a href="index.php">Already a member? Sign in</a>
   	</p>
   </form>
+  
+  
 </body>
 </html>

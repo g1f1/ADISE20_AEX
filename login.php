@@ -3,7 +3,6 @@ session_start();
 include "db_conn.php";
 
 
-$db = mysqli_connect('localhost', 'root', '', 'demo');
 
 
 if (isset($_POST['login_user'])) {

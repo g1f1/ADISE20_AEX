@@ -18,14 +18,14 @@
 			<p class="error"><?php echo $_GET['error']; ?></p>
 		<?php } ?>
 		<label>User Name</label>
-		<input type="test" name="username" placeholder="Type Username...">
+		<input type="text" name="username" placeholder="Type Username...">
 
 		<label>Password</label>
 		<input type="password" name="password" placeholder="Type Password...">
 
 		<input type="submit" value="LOGIN" name="login_user" class="log">
 		
-		<a href="register.php">Not a member?<b>  Sign up</a>
+		<a href="register.php">Not a member? Sign up</a>
 
 		
 </form>
