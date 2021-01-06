@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 <?php include('sign-up.php') ?>
 <!DOCTYPE html>
 <html>
@@ -47,5 +45,5 @@
   
   
 </body>
->>>>>>> d17fbc539843cce6a3343fb50d96ecd1af331779
+
 </html>
