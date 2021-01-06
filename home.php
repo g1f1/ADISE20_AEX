@@ -1,4 +1,4 @@
- <?php include "db_conn.php";
+ <?php include ('lib/db_conn.php');
    	  
   ?> 
   
