@@ -15,7 +15,7 @@ if (isset($_POST['reg_user'])) {
   $email = mysqli_real_escape_string($conn, $_POST['email']);
   $password_1 = mysqli_real_escape_string($conn, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($conn, $_POST['password_2']);
-=======
+
 $db = mysqli_connect('localhost', 'root', '', 'demo');
 
 
@@ -39,9 +39,9 @@ if (isset($_POST['reg_user'])) {
   }
  
   $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
-<<<<<<< HEAD
+
   $result = mysqli_query($conn, $user_check_query);
-=======
+
   $result = mysqli_query($db, $user_check_query);
 
   $user = mysqli_fetch_assoc($result);
