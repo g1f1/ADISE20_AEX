@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "db_conn.php";
+include ('lib/db_conn.php');
 
 
 $db = mysqli_connect('localhost', 'root', '', 'demo');
@@ -27,7 +27,7 @@ if (isset($_POST['login_user'])) {
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "You are now logged in";
-  	  header('location: tavliplakoto/index.html');
+  	  header('location: home.php');
   	}else {
   		header("Location: index.php?error=Wrong username/password combination");
       exit();
