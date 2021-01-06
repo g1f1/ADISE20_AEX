@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "db_conn.php";
+include ('lib/db_conn.php');
 
 
 $db = mysqli_connect('localhost', 'root', '', 'demo');
