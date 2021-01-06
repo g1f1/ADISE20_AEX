@@ -83,6 +83,6 @@ else{
   	$_SESSION['success'] = "You are now logged in";
   	header("Location: home.php");
   
-}}
+}
 
 
