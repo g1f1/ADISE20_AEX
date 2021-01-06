@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ﻿
 function rules() {
   var modal = document.getElementById("rules");
@@ -41,9 +41,5 @@ function loadDoc() {
 
 
 
-=======
-﻿
 
 
-
->>>>>>> d17fbc539843cce6a3343fb50d96ecd1af331779
