@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:sign-up.php
+
 <?php
 session_start();
 include ('lib/db_conn.php');
