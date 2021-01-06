@@ -74,7 +74,7 @@ else{
   
 }}
 
-=======
+
     $password = md5($password_1);
   	$query = "INSERT INTO users (username, email, password) 
   			  VALUES('$username', '$email', '$password')";
