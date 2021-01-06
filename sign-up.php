@@ -58,8 +58,6 @@ else{
   
 }}
 
-========
->>>>>>> d17fbc539843cce6a3343fb50d96ecd1af331779
 <?php
 session_start();
 include ('lib/db_conn.php');
